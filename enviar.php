@@ -1,22 +1,14 @@
+
 <?php
 
-$nombre = $_POST['nombre'];
-$nombre = $_POST['email'];
-$nombre = $_POST['mensaje'];
+ $destino="vampiremusic90@gmail.com";
+ $nombre=$_POST["name"];
+ $correo=$_POST["email"];;
+ $mensaje=$_POST["message"];
+ $contenido="Nombre: ".$nombre."\nCorreo: ".$correo."\nMensaje: ".$mensaje;
+ mail($destino,"Contacto", $contenido);
+ header("Location: index.html");
 
 
-//datos para el correo
-
-$destnatario = "vampiremusic90@gmail.com";
-$asunto = "Contacto desde nuestra web";
-
-$carta = "De: $nombre \"n;
-$carta .="email: $email \n";
-$carta .="Mensaje: $mensaje \n";
-
-
-
-mail($destinatario, $asunto, $carta);
-header('Location:mensajeconfrmacion.html')
 
 ?>
